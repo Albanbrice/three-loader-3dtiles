@@ -30,7 +30,9 @@ function App() {
                  dracoDecoderPath={"https://unpkg.com/three@0.137.0/examples/js/libs/draco"}
                  basisTranscoderPath={"https://unpkg.com/three@0.137.0/examples/js/libs/basis"}
                  rotation={new Euler(-Math.PI / 2, 0, 0)}
-                 url="https://int.nyt.com/data/3dscenes/ONA360/TILESET/0731_FREEMAN_ALLEY_10M_A_36x8K__10K-PN_50P_DB/tileset_tileset.json"
+                //  url="https://int.nyt.com/data/3dscenes/ONA360/TILESET/0731_FREEMAN_ALLEY_10M_A_36x8K__10K-PN_50P_DB/tileset_tileset.json"
+                // url="tileset_villa_v01.json"
+                url="./LoD/tileset_orco1.json"
                 maximumScreenSpaceError={48}
               />
             </Suspense>
