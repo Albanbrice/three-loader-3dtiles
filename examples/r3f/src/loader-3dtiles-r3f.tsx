@@ -1,6 +1,7 @@
 import { Loader3DTiles, LoaderProps, Runtime } from 'three-loader-3dtiles'
 import { useLoader, useThree, useFrame } from '@react-three/fiber'
 import { Loader, Object3D } from 'three'
+import React, {useRef} from 'react'
 
 class Loader3DTilesBridge extends Loader {
   props: LoaderProps;
@@ -36,11 +37,16 @@ function Loader3DTilesR3FAsset(props) {
     }
   }
 
+
+
   // TODO: Getting type error
   // @ts-ignore
   const { model, runtime } = useLoader(Loader3DTilesBridge, props.url, (loader:Loader3DTilesBridge) => {
     loader.setProps(loaderProps);    
   })
+
+
+
 
   useFrame(({ gl, camera }, dt) => {
     runtime.update(dt, gl, camera);
